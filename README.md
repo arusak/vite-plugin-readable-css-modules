@@ -1,12 +1,16 @@
 <h3>Vite Plugin: Readable CSS Module Classes</h3>
 
+<p>   
 <a href="https://github.com/arusak/vite-plugin-readable-css-modules/actions/workflows/ci.yml">
     <img alt="CI Status" src="https://github.com/arusak/vite-plugin-readable-css-modules/actions/workflows/ci.yml/badge.svg"/>
 </a>
 <a href="https://www.npmjs.com/package/vite-plugin-readable-css-modules">
     <img alt="Install count" src="https://img.shields.io/npm/dm/vite-plugin-readable-css-modules.svg">
 </a>
-<img alt="Current version" src="https://img.shields.io/github/tag/arusak/vite-plugin-readable-css-modules.svg?color=3498DB&label=version">
+<span>
+    <img alt="Current version" src="https://img.shields.io/github/tag/arusak/vite-plugin-readable-css-modules.svg?color=3498DB&label=version">
+</span>
+</p>
 
 ### Setup
 
@@ -50,3 +54,11 @@ By using this module, you get more meaningful class names
   /* ...css */
 }
 ```
+
+### Options
+```
+componentNameRegExp
+```
+
+A regexp to extract component's name from CSS file path. By default, it assumes that file name 
+is something like `ComponentName.module.css`.
