@@ -25,12 +25,12 @@ $ npm install --save-dev vite-plugin-readable-css-modules
 In your [`vite.config.ts`](https://vitejs.dev/config/#configuring-vite) simply add the plugin:
 
 ```ts
-import { readableCssClasses } from 'vite-plugin-readable-css-modules';
+import { readableCssModules } from 'vite-plugin-readable-css-modules';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [
-    readableCssClasses()
+    readableCssModules()
   ]
 })
 ```
@@ -39,21 +39,11 @@ And that's it. When running `vite build` your generated CSS should be significan
 
 ### How does it work?
 
-By default, when using css modules, you end up with hashes in your css files:
+In Vite, when using css modules, you don't know, from which component does a specific rendered element come from. It generates names like `._wrapper_pzatx_32`.
 
-```css
-._card_pzatx_32 {
-  /* ...css */
-}
-```
+Because of that, the dom tree in devtools gives you no clue what are those component that are rendered.  
 
-By using this module, you get more meaningful class names
-
-```css
-.Card_wrapper_001 {
-  /* ...css */
-}
-```
+By using this module, you get more meaningful class names, containing the name of your component, name of the selector and number of line in CSS file: `.Card_wrapper_1`
 
 ### Options
 ```
