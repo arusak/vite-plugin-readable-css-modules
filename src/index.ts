@@ -19,9 +19,10 @@ export const readableCssModules = (options:PluginOptions = {}): Plugin => {
             (name, filename, css) => {
               const i = css.indexOf('.' + name);
               const line = css.substring(0, i).split(/[\r\n]/).length;
-              const file = filename.match(componentNameRegExp);
+              const matches = filename.match(componentNameRegExp);
+              const component = matches ? matches[1] : '';
 
-              return `${file}_${name}_${String(line).padStart(3, '0')}`;
+              return `${component}_${name}_${line}`;
             },
         }
       };
