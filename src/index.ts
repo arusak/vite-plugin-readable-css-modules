@@ -17,7 +17,7 @@ const sanitize = (src: string, replacement: string) => {
   return src.replace(/\W/g, replacement);
 };
 
-const hashText = (text: string) => createHash('md5').update(text).digest('base64url').substring(-4);
+const hashText = (text: string) => createHash('md5').update(text).digest('base64url').substring(0, 4);
 
 const getComponentNameFromFile = (filename: string, replacement: string) => {
   const matches = filename.match(fileRegExp);
