@@ -43,12 +43,14 @@ In Vite, when using css modules, you don't know, from which component does a spe
 
 Because of that, the dom tree in devtools gives you no clue what are those component that are rendered.  
 
-By using this module, you get more meaningful class names, containing the name of your component, name of the selector and number of line in CSS file: `.Card_wrapper_1`
+By using this module, you get more meaningful class names, containing the name of your component and name of the selector: `.views_Card_wrapper`
+Optionally, number of line in CSS file and hash can be added: `.Card_wrapper_1_Az7P`
 
 ### Options
-```
-componentNameRegExp
-```
+* componentNameMatching: `file` or `path` 
+* pathDepth: how many path components to use
+* includeLineNumber: `false` by default
+* includeHash: `false` by default
+* separator: string to separate name components, `_` by default
+* replacement: string to replace non-alphanumeric chars, `_` by default
 
-A regexp to extract component's name from CSS file path. By default, it assumes that file name 
-is something like `ComponentName.module.css`.
