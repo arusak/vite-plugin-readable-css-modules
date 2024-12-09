@@ -1,50 +1,53 @@
 {
-    "name": "vite-plugin-readable-css-modules",
-    "version": "0.6.0",
-    "description": "Enhances readability of the classnames generated for CSS modules in vite",
-    "type": "module",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/types/index.d.ts",
-    "files": [
-        "dist"
-    ],
-    "exports": {
-        ".": {
-            "import": "./dist/index.mjs",
-            "require": "./dist/index.cjs"
-        }
-    },
-    "keywords": [
-        "vite",
-        "vite-plugin",
-        "css-modules",
-        "css"
-    ],
-    "author": "Anton Rusak",
-    "license": "MIT",
-    "scripts": {
-        "dev": "rollup -c rollup.config.js --watch",
-        "build": "rollup -c rollup.config.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/arusak/vite-plugin-readable-css-modules.git"
-    },
-    "bugs": {
-        "url": "https://github.com/arusak/vite-plugin-readable-css-modules/issues"
-    },
-    "homepage": "https://github.com/arusak/vite-plugin-readable-css-modules",
-    "peerDependencies": {
-        "vite": "^6.0.0 || ^5.0.0 || ^4.0.0 || ^3.0.0"
-    },
-    "devDependencies": {
-        "@rollup/plugin-typescript": "11.1.6",
-        "rollup": "4.28.1",
-        "tslib": "2.8.1",
-        "typescript": "5.7.2"
-    },
-    "dependencies": {
-        "@types/node": "22.10.1"
+  "name": "vite-plugin-readable-css-modules",
+  "version": "0.6.0",
+  "description": "Enhances readability of the classnames generated for CSS modules in vite",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "css-modules",
+    "css"
+  ],
+  "author": "Anton Rusak",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c rollup.config.js --watch",
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arusak/vite-plugin-readable-css-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arusak/vite-plugin-readable-css-modules/issues"
+  },
+  "homepage": "https://github.com/arusak/vite-plugin-readable-css-modules",
+  "peerDependencies": {
+    "vite": "^6.0.0 || ^5.0.0 || ^4.0.0 || ^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "11.1.6",
+    "rollup": "4.28.1",
+    "tslib": "2.8.1",
+    "typescript": "5.7.2"
+  },
+  "dependencies": {
+    "@types/node": "22.10.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.28.1"
+  }
 }
